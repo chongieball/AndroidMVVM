@@ -1,0 +1,74 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.61'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.15"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    //ANDROID
+    COMPILE_SDK_VERSION     = 28
+    BUILD_TOOLS_VERSION     = '28.0.0'
+    MIN_SDK_VERSION         = 19
+    TARGET_SDK_VERSION      = 28
+    SUPPORT_PACKAGE_VERSION = '28.0.0'
+    LIFE_CYCLE_VERSION      = '1.1.1'
+    PAGING_VERSION          = '1.0.0'
+
+    VERSION_CODE            = 1
+    VERSION_NAME            = '1.0.0'
+
+    //TESTING
+    JUNIT_VERSION           = '4.12'
+    ESPRESSO_VERSION        = '3.0.1'
+    ROBOELECTRIC_VERSION    = '3.7.1'
+    MOCKITO_VERSION         = '2.15.0'
+    MOCKWEBSERVER_VERSION   = '3.10.0'
+
+    //KOTLIN
+    KTX_VERSION             = '0.3'
+
+
+    //helper
+    OKHTTP_VERSION          = '3.9.0'
+    OKIO_VERSION            = '1.13.0'
+    RETROFIT_VERSION        = '2.4.0'
+    DAGGER_VERSION          = '2.16'
+    RX_JAVA_VERSION         = '2.2.0'
+    RX_ANDROID_VERSION      = '2.1.0'
+    RX_KOTLIN_VERSION       = '2.0.2'
+    ROOM_VERSION            = '1.1.1'
+    MOSHI_VERSION           = '1.5.0'
+    MOSHI_CONVERTER_VERSION = '2.3.0'
+    KOTSHI_VERSION          = '1.0.2'
+    JAVA_ANNOTATION_VERSION = '1.3.2'
+    TIMBER_VERSION          = '4.6.1'
+    REACTIVE_LIVE_DATA_VERSION = '0.13.0'
+
+    //VIEW
+    GLIDE_VERSION           = '4.6.1'
+    GLIDE_TRANSFORMATION_VERSION = '3.1.1'
+
+}
